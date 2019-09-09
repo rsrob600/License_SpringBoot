@@ -13,5 +13,7 @@ public interface PersonRepository extends CrudRepository<Person, Long>{
 	// this method retrieves all the persons from the database copy
 	List<Person> findAll();
 	
+	// this method retrieves ONLY the persons from the database copy without related License records
+	List<Person> findByLicenseIsNull();
 	
 }

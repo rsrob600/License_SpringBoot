@@ -67,6 +67,9 @@ public class Person {
 
 	public Date getUpdatedAt() {return updatedAt;}
 	public void setUpdatedAt(Date updatedAt) {this.updatedAt = updatedAt;}
+	
+	public License getLicense() {return license;}
+	public void setLicense(License license) {this.license = license;}
 
 	@PrePersist
     protected void onCreate(){

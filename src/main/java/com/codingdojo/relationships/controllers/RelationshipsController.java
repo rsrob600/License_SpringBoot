@@ -49,7 +49,7 @@ public class RelationshipsController {
 	// Display NEW License page route
 	@RequestMapping("/licenses/new")
 	public String newLicense(Model model, @ModelAttribute("license")License license) {
-		List<Person> persons = personService.allPersons();
+		List<Person> persons = personService.allPersonsNullLicense();
 		model.addAttribute("persons", persons);
 		return "views/addLicense.jsp";
 	}

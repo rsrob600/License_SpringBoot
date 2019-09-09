@@ -21,6 +21,11 @@ public class PersonService {
 		return personRepository.findAll();
 	}
 	
+	// get all persons WITHOUT license number assignments
+	public List<Person> allPersonsNullLicense(){
+		return personRepository.findByLicenseIsNull();
+	}
+	
 	// get one person by id
 	public Person findPerson(Long id) {
 		Optional<Person> optionalPerson = personRepository.findById(id);
